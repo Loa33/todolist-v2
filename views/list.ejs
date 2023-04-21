@@ -1,0 +1,46 @@
+<%- include("header") -%>	
+	<body>
+		<h1 class="heading">Lista de tareas</h1>
+		<div class="container">
+			
+			<div class="img">
+				<img class="img-todo" src="images/image-01.png" alt="">
+			</div>
+			<div class="list">
+		<h2><%= listTitle %></h2>
+		<ul class="list-todo">
+			<% for(let i of tasks){%>
+				<li class="item-list">
+				<form class="form-check" action="/check" method="post">
+						<input type='hidden' value="<%= listTitle%>" name='listName'>
+						<input type='hidden' value="<%= i._id%>" name='checkbox'>
+						<input type="checkbox" id="<%=i._id%>"name="checkbox" value="<%= i._id%>" <% if(i.isChecked === true){%> checked <%} %> onClick="this.form.submit()"> <p><%=i.name%></p>
+				</form>
+				<form class="form-delete" action="/delete" method="post">
+						<input type='hidden' value="<%= listTitle%>" name='listName'>
+						<input type='hidden' value="<%= i._id%>" name='delete'>
+						<input type="button" class= "btn-delete" id="<%=i._id%>" name="delete" onClick="this.form.submit()">
+				</form>
+				</li>
+				
+			<%}%>
+			<li class="item-input">
+				<form  action="/" method="post">
+					
+					<input class="new-item"
+						type="text"
+						id="taskInput"
+						name="taskInput"
+						placeholder="Add task..."
+						autocomplete="off"
+					/>
+					<button type="submit" name="list" value=<%= listTitle%> ><i class="fa-solid fa-circle-plus"></i></button>
+				</form>
+			</li>
+		</ul>
+			</div>
+		</div>
+	
+	</body>
+
+	<%- include("footer") -%>	
