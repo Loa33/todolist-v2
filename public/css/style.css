@@ -17,7 +17,7 @@ h1{
 }
 
 .img-todo{
-    width: 250vh;
+    
     max-width: 100%;
 }
 
@@ -25,7 +25,7 @@ h1{
     display:flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.445);
-    max-width: 50%;
+    max-width: 60%;
     margin: auto;
     border-radius: 20px;
     padding: 10vh;
@@ -33,7 +33,7 @@ h1{
 .list{
     font-family: 'Lato', sans-serif;
     width: 150vh;
-    max-width:100%;
+    max-width:60%;
 }
 
 input[type="checkbox"]:checked+p{
@@ -44,6 +44,8 @@ p{
     display: inline-block;
     margin: 0;
     padding: 0;
+    width: 80% !important;
+    overflow-wrap: break-word;
 }
 
 .new-item {
@@ -132,6 +134,11 @@ footer{
     margin-top: 5px;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+}
+
+.img{
+    width: 250vh;
+    max-width: 40%;
 }
 
 .btn-delete{
