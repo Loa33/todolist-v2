@@ -289,7 +289,6 @@ footer{
         /* CSS specific to iOS devices */ 
         input[type="checkbox"]:checked:after{
             top: -0.7px;
-            margin: -15px 0 0 0;
             font-size: 1rem;
         }
       }
