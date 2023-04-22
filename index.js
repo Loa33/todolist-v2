@@ -14,8 +14,21 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const connectDB = async()=>{
+	try{
+		const conn = await mongoose.connect(process.env.MONGO_URI);
+	}catch(e){
+		console.log(e);
+		process.exit(1);
+	}
+}
 
-mongoose.connect(process.env.MONGO_URI);
+
+connectDB().then(()=>{
+	app.listen(PORT, ()=>{
+		console.log("Listening on port: " + PORT);
+	})
+})
 
 const { Schema } = mongoose;
 
@@ -172,9 +185,6 @@ app.get("/:customListName", async (req, res) => {
 })
 
 
-app.listen(3000, function () {
-	console.log("listening on port 3000");
-});
 
 
 
