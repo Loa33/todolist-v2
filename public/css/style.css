@@ -128,12 +128,12 @@ input[type="checkbox"]:active, input[type="checkbox"]:checked:active{
 }
 
 input[type="checkbox"]:checked:after{
-    content: '\2714';
+    content: '\2714\fe0e';
 	font-size: 18px;
 	position: absolute;
 	top: -4px;
 	left: 0px;
-    color:rgb(18, 182, 223);
+    color:rgba(18, 182, 223, 1);
     -webkit-text-fill-color: rgba(18, 182, 223, 1);
     -webkit-opacity: 1; 
 }
@@ -288,9 +288,6 @@ footer{
     @supports (-webkit-touch-callout: none) {
         /* CSS specific to iOS devices */ 
         input[type="checkbox"]:checked:after{
-            content: '\2714';
-            color: rgb(18, 182, 223);
-            -webkit-text-fill-color: rgb(18, 182, 223);
             top: -0.7px;
         }
       }
