@@ -288,7 +288,7 @@ footer{
     @supports (-webkit-touch-callout: none) {
         /* CSS specific to iOS devices */ 
         input[type="checkbox"]:checked:after{
-            top: -0.7px;
+            top: -1px;
             font-size: 1rem;
         }
       }
