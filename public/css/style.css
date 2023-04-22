@@ -282,7 +282,7 @@ footer{
         input[type="checkbox"]:checked:after{
             content: '\2714';
             color: rgb(18, 182, 223);
-            top: -2px;
+            top: -1.5px;
         }
       }
 
