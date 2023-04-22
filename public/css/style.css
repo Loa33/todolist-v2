@@ -132,6 +132,7 @@ input[type="checkbox"]:checked:after{
 	top: -4px;
 	left: 0px;
     color:rgb(18, 182, 223);
+    -webkit-text-fill-color: rgb(18, 182, 223);
 }
 footer{
     margin-top: 5px;
