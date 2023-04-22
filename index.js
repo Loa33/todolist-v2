@@ -17,18 +17,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const connectDB = async()=>{
 	try{
 		const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
 	}catch(e){
 		console.log(e);
 		process.exit(1);
 	}
 }
-
-
-connectDB().then(()=>{
-	app.listen(PORT, ()=>{
-		console.log("Listening on port: " + PORT);
-	})
-})
 
 const { Schema } = mongoose;
 
@@ -185,6 +179,11 @@ app.get("/:customListName", async (req, res) => {
 })
 
 
-
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
 
 
