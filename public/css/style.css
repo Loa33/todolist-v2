@@ -237,6 +237,8 @@ footer{
     input[type="checkbox"]:checked+p {
         text-decoration: 0.8px line-through;
         text-decoration-color: rgb(18, 182, 223);
+        -webkit-text-decoration-line: line-through;
+        -webkit-text-decoration-color: rgb(18, 182, 223);
     }
 
     input[type="checkbox"]:checked:after{
