@@ -119,6 +119,8 @@ input[type="checkbox"]:checked{
     border-radius: 3px;
     vertical-align: middle;
     color:rgb(18, 182, 223);
+    -webkit-text-fill-color: rgba(18, 182, 223, 1);
+    -webkit-opacity: 1; 
 }
 
 input[type="checkbox"]:active, input[type="checkbox"]:checked:active{
@@ -132,7 +134,7 @@ input[type="checkbox"]:checked:after{
 	top: -4px;
 	left: 0px;
     color:rgb(18, 182, 223);
-    -webkit-text-fill-color: rgb(18, 182, 223, 1);
+    -webkit-text-fill-color: rgba(18, 182, 223, 1);
     -webkit-opacity: 1; 
 }
 footer{
