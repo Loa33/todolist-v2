@@ -102,6 +102,7 @@ i{
 input[type="checkbox"]{
     margin: 0 6px 0px 15px;
     -webkit-appearance: none;
+    appearance: none;
 	background-color: #fafafa;
 	border: 1px solid #cacece;
     padding: 8px;
@@ -121,6 +122,8 @@ input[type="checkbox"]:checked{
     color:rgb(18, 182, 223);
     -webkit-text-fill-color: rgba(18, 182, 223, 1);
     -webkit-opacity: 1; 
+    opacity: 1;
+    appearance: none;
 }
 
 input[type="checkbox"]:active, input[type="checkbox"]:checked:active{
@@ -135,7 +138,8 @@ input[type="checkbox"]:checked:after{
 	left: 0px;
     color:rgba(18, 182, 223, 1);
     -webkit-text-fill-color: rgba(18, 182, 223, 1);
-    -webkit-opacity: 1; 
+    -webkit-opacity: 1;
+    opacity: 1; 
 }
 footer{
     margin-top: 5px;
@@ -243,6 +247,7 @@ footer{
         text-decoration-color: rgb(18, 182, 223);
         -webkit-text-decoration-line: line-through;
         -webkit-text-decoration-color: rgb(18, 182, 223);
+        text-decoration-line: line-through;
     }
 
     input[type="checkbox"]:checked:after{

@@ -45,7 +45,7 @@ const List = mongoose.model("List", listSchema);
 
 async function findItems() {
 	try {
-		let result = await Item.find({});
+		let result = await Item.find();
 		return result
 	} catch (e) {
 		console.log(e);
